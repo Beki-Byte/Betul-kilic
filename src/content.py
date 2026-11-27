@@ -239,3 +239,64 @@ PRIVACY = {
     ],
   },
 }
+
+
+# Projekte (neu): Highlight Kartenatelier + Liste
+T.update({
+  "k_meta": {"tr": "Web uygulaması", "de": "Web-App", "en": "Web app"},
+  "k_text": {
+    "tr": "Babam için bir doğum günü kartı tasarlamak istedim ama kolay, ücretsiz ve tam istediğim gibi bir uygulama bulamadım. Ben de kendim yaptım.",
+    "de": "Ich wollte eine Geburtstagskarte für meinen Vater gestalten, fand aber keine App, die einfach, kostenlos und so war, wie ich sie wollte. Also habe ich selbst eine gebaut.",
+    "en": "I wanted to design a birthday card for my dad, but couldn't find an app that was easy, free and the way I wanted. So I built one myself.",
+  },
+  "k_link": {"tr": "Atölyeyi aç", "de": "Atelier öffnen", "en": "Open the studio"},
+  "k_card": {"tr": "İyi ki doğdun", "de": "Alles Gute", "en": "Happy birthday"},
+  "k_card_sub": {"tr": "kendi tasarımın", "de": "selbst gestaltet", "en": "designed by you"},
+  "pl_eyebrow": {"tr": "Daha fazlası", "de": "Noch mehr", "en": "More"},
+  "st_live": {"tr": "Yayında", "de": "Live", "en": "Live"},
+  "st_wip": {"tr": "Yapım aşamasında", "de": "Im Bau", "en": "In progress"},
+  "st_private": {"tr": "Özel", "de": "Privat", "en": "Private"},
+})
+
+PROJECTS = [
+  {"name": "Digital Wardrobe", "status": "live", "tone": "accent",
+   "type": {"tr": "Web uygulaması", "de": "Web-App", "en": "Web app"},
+   "desc": {
+     "tr": "Kıyafetlerini eklersin, uygulama zevkine ve havaya göre kombin önerir. Favori kombinlerini işaretledikçe ya da kendin oluşturup kaydettikçe seni daha iyi tanır.",
+     "de": "Du legst deine Klamotten an, und die App schlägt dir Outfits vor, passend zu deinem Geschmack und zum Wetter. Je mehr Lieblingsoutfits du markierst oder selbst erstellst und speicherst, desto besser lernt sie dich kennen.",
+     "en": "You add your clothes, and the app suggests outfits based on your taste and the weather. The more favourite outfits you mark or create and save yourself, the better it gets to know you.",
+   },
+   "links": [
+     ({"tr": "Uygulama", "de": "App", "en": "App"}, "https://beki-byte.github.io/digital-wardrobe/"),
+     ({"tr": "3D dolap", "de": "3D-Schrank", "en": "3D closet"}, "https://beki-byte.github.io/digital-wardrobe/neu/"),
+     ({"tr": "Y2K", "de": "Y2K", "en": "Y2K"}, "https://beki-byte.github.io/digital-wardrobe/y2k/"),
+   ]},
+  {"name": "The Dinner Society", "status": "wip", "tone": "ink",
+   "type": {"tr": "Yapay zekâ uygulaması", "de": "KI-App", "en": "AI app"},
+   "desc": {
+     "tr": "Yapay zekâyla eksiksiz, her şey dahil bir cinayet gizemi akşam yemeği planlayan uygulama: yazdırılabilir materyaller, menü, kıyafet fikirleri ve daha fazlası.",
+     "de": "Eine App, die mit KI ein komplettes All-inclusive-Krimidinner plant: mit Sachen zum Ausdrucken, Menü, Outfit-Ideen und mehr.",
+     "en": "An app that uses AI to plan a complete all-inclusive murder mystery dinner: printables, menu, outfit ideas and more.",
+   }},
+  {"name": "Mochi Town", "status": "wip", "tone": "sky",
+   "type": {"tr": "Dijital şehir", "de": "Digitale Stadt", "en": "Digital town"},
+   "desc": {
+     "tr": "Arkadaşlarınla buluşup birlikte ders çalışabildiğin dijital bir şehir. E-kitap bağlayıcısıyla kendi kitaplarını da orada okuyabilirsin.",
+     "de": "Eine digitale Stadt, in der man sich mit Freunden trifft und zusammen lernt. Mit dem E-Book-Connector kann man dort auch seine eigenen Bücher lesen.",
+     "en": "A digital town where you meet friends and study together. With the e-book connector, you can also read your own books there.",
+   }},
+  {"name": "Lisan", "status": "private", "tone": "img", "img": "img/lisan.webp",
+   "type": {"tr": "Uygulama", "de": "App", "en": "App"},
+   "desc": {
+     "tr": "Oyun gibi kelime öğrenme uygulaması: kelime öğren, para topla, kendi hayvanını ve odanı süsle. Öğrenme planı, mini oyunlar ve fotoğrafla tarama.",
+     "de": "Vokabeln lernen wie im Spiel: Wörter lernen, Münzen sammeln, das eigene Tier und Zimmer gestalten. Mit Lernplan, Minispielen und Foto-Scan.",
+     "en": "Learning vocabulary like a game: learn words, collect coins, decorate your own pet and room. With a study plan, mini games and photo scanning.",
+   }},
+  {"name": "Niko", "status": "private", "tone": "night",
+   "type": {"tr": "Yapay zekâ · yerel", "de": "KI · lokal", "en": "AI · local"},
+   "desc": {
+     "tr": "Kendine has karakteri olan kişisel yapay zekâ arkadaşım. Tamamen kendi bilgisayarımda çalışıyor; sohbet ve sesli mod var.",
+     "de": "Mein persönlicher KI-Begleiter mit eigenem Charakter. Läuft komplett lokal auf meinem Rechner, mit Chat- und Sprachmodus.",
+     "en": "My personal AI companion with its own character. Runs entirely on my own computer, with chat and voice mode.",
+   }},
+]

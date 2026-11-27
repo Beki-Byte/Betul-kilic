@@ -13,7 +13,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from content import LANGS, T, INTERESTS, JOURNEY, MARQUEE, PRIVACY  # noqa: E402
+from content import LANGS, T, INTERESTS, JOURNEY, MARQUEE, PRIVACY, PROJECTS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOME = {"tr": "index.html", "de": "de.html", "en": "en.html"}
@@ -21,7 +21,7 @@ PRIV = {"tr": "datenschutz.html", "de": "datenschutz-de.html", "en": "datenschut
 MAIL = "goldensunderya9@gmail.com"
 GITHUB = "https://github.com/Beki-Byte"
 URL_DERYA = "https://beki-byte.github.io/Derya-Kilic-Hipnoz-ve-Deep-EFT-Merkezi-/"
-URL_LISAN = "https://lisan.goldensunderya.workers.dev/"
+URL_KARTEN = "https://kartenatelier.goldensunderya.workers.dev"
 
 # Weiterleitung nur auf den TR-Seiten (Standard-Adresse): gespeicherte Sprache oder Browsersprache.
 REDIRECT = """<script>(function(){var P=%s,s=null;if(/[?&]lang=/.test(location.search))return;
@@ -104,6 +104,23 @@ def index(lang):
             <p class="jr__text">{html.escape(d)}</p>
           </div>
         </li>""" for i, (n, d) in enumerate(JOURNEY[lang]))
+    plist = ""
+    for i, pr in enumerate(PROJECTS):
+        links = "".join(f'<a class="link" href="{u}" target="_blank" rel="noopener noreferrer">{html.escape(lbl[lang])} <i aria-hidden="true">↗</i></a>' for lbl, u in pr.get("links", []))
+        prev = (f'<img src="{pr["img"]}" alt="" loading="lazy">' if pr.get("img")
+                else f'<b>{html.escape(pr["name"])}</b>')
+        plist += f"""
+        <li class="pl__row" data-tone="{pr["tone"]}">
+          <span class="pl__no">0{i + 3}</span>
+          <div class="pl__main">
+            <h3 class="pl__name">{html.escape(pr["name"])}</h3>
+            <p class="pl__desc">{html.escape(pr["desc"][lang])}</p>
+            {f'<div class="pl__links">{links}</div>' if links else ''}
+          </div>
+          <span class="pl__type">{html.escape(pr["type"][lang])}</span>
+          <span class="pl__status pl__status--{pr["status"]}">{T["st_" + pr["status"]][lang]}</span>
+          <div class="pl__prev" aria-hidden="true">{prev}</div>
+        </li>"""
     stories = "".join(f'<li><span>0{i}</span>{L("story_" + str(i))}</li>' for i in range(1, 5))
     feats = "".join(f"<li>{html.escape(f)}</li>" for f in T["features"][lang])
     subject = L("ct_mail_subject")
@@ -233,18 +250,25 @@ def index(lang):
       </article>
 
       <article class="proj proj--flip">
-        <a class="proj__img" href="{URL_LISAN}" target="_blank" rel="noopener noreferrer" data-cursor="{L("cursor_open")}" tabindex="-1" aria-hidden="true">
-          <figure data-img-reveal="up"><img src="img/lisan.webp" width="800" height="500" alt="" loading="lazy"></figure>
+        <a class="proj__img" href="{URL_KARTEN}" target="_blank" rel="noopener noreferrer" data-cursor="{L("cursor_open")}" tabindex="-1" aria-hidden="true">
+          <figure class="cardart" data-img-reveal="up">
+            <span class="cardart__back"></span>
+            <span class="cardart__front"><small>{L("k_card_sub")}</small><em>{L("k_card")}</em><span>Kartenatelier</span></span>
+          </figure>
         </a>
         <div class="proj__body">
-          <p class="proj__meta"><span>02</span>{L("p2_meta")}</p>
-          <h3 class="proj__title proj__title--big">{L("p2_title")}</h3>
-          <p class="proj__text">{L("p2_text")}</p>
-          <a class="link" href="{URL_LISAN}" target="_blank" rel="noopener noreferrer">{L("p2_link")} <i aria-hidden="true">↗</i></a>
+          <p class="proj__meta"><span>02</span>{L("k_meta")}</p>
+          <h3 class="proj__title proj__title--big">Kartenatelier</h3>
+          <p class="proj__text">{L("k_text")}</p>
+          <a class="link" href="{URL_KARTEN}" target="_blank" rel="noopener noreferrer">{L("k_link")} <i aria-hidden="true">↗</i></a>
         </div>
       </article>
 
-      <p class="proj__next"><span>03</span><b>{L("pr_next")}</b></p>
+      <p class="eyebrow pl__eyebrow">{L("pl_eyebrow")}</p>
+      <ol class="pl">{plist}
+      </ol>
+
+      <p class="proj__next"><span>✦</span><b>{L("pr_next")}</b></p>
     </section>
 
     <!-- 8 · NAHAUFNAHME: Zahlen + Demo-Chat -->

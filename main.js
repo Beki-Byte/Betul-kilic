@@ -103,6 +103,18 @@ if (tier !== 'low') {
   });
 }
 
+// 7 · Projektliste — Vorschau folgt der Maus (nur Desktop)
+if (tier === 'high') {
+  $$('.pl__row').forEach((row) => {
+    const prev = row.querySelector('.pl__prev');
+    const x = gsap.quickTo(prev, 'left', { duration: 0.5, ease: 'power3.out' });
+    const y = gsap.quickTo(prev, 'top', { duration: 0.5, ease: 'power3.out' });
+    row.addEventListener('pointerenter', (e) => { gsap.set(prev, { left: e.clientX + 180, top: e.clientY }); row.classList.add('is-hover'); });
+    row.addEventListener('pointermove', (e) => { x(e.clientX + 180); y(e.clientY); });
+    row.addEventListener('pointerleave', () => row.classList.remove('is-hover'));
+  });
+}
+
 // 8 · Demo-Chat
 initChat($('.chat'));
 
