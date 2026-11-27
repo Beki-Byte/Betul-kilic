@@ -1,0 +1,78 @@
+/* Basis-Styles für die fx-Bausteine. Einbinden: <link rel="stylesheet" href="fx/fx.css">
+   Farben kommen aus den Seiten-Variablen (--page-bg, --page-fg, --accent). */
+:root { --page-bg: #0c0b0f; --page-fg: #f3eee7; --accent: #e8a87c; }
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+html.fx-locked, html.fx-locked body { overflow: hidden; }
+
+.fx-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+
+/* Text-Masken */
+/* Maske mit Luft für Unter-/Oberlängen und Akzente (y, g, ç, Ä) – auch bei line-height < 1 */
+.fx-mask { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.12em 0.04em 0.26em; margin: -0.12em -0.04em -0.26em; }
+.fx-unit { display: inline-block; will-change: transform; }
+[data-fx-split="chars"] .fx-mask { padding-inline: 0.01em; margin-inline: -0.01em; }
+
+/* Cursor */
+.fx-has-cursor, .fx-has-cursor a, .fx-has-cursor button { cursor: none; }
+.fx-has-cursor input, .fx-has-cursor textarea, .fx-has-cursor select { cursor: auto; }
+.fx-cursor-dot, .fx-cursor-ring {
+  position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none; border-radius: 50%;
+  mix-blend-mode: difference; translate: -50% -50%;
+}
+.fx-cursor-dot { width: 6px; height: 6px; background: #fff; }
+.fx-cursor-ring {
+  width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.7);
+  display: grid; place-items: center;
+  transition: width .45s cubic-bezier(.2,.8,.2,1), height .45s cubic-bezier(.2,.8,.2,1),
+              background-color .3s, border-color .3s, opacity .3s;
+}
+.fx-cursor-ring[data-state="hover"] { width: 64px; height: 64px; }
+.fx-cursor-ring[data-state="label"] { width: 104px; height: 104px; background: #fff; border-color: transparent; }
+.fx-cursor-ring[data-state="hidden"] { opacity: 0; }
+.fx-cursor-ring.is-down { width: 30px; height: 30px; }
+.fx-cursor-label {
+  font: 600 11px/1 system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #000;
+  opacity: 0; transition: opacity .2s;
+}
+.fx-cursor-ring[data-state="label"] .fx-cursor-label { opacity: 1; }
+
+/* Preloader */
+.fx-preloader { position: fixed; inset: 0; z-index: 10000; color: var(--pl-fg, var(--page-fg)); }
+.fx-preloader__half { position: absolute; left: 0; right: 0; height: 50.5%; background: var(--pl-bg, var(--page-bg)); }
+.fx-preloader__half--top { top: 0; }
+.fx-preloader__half--bottom { bottom: 0; }
+.fx-preloader__inner {
+  position: absolute; inset: auto 4vw 4vw 4vw; display: flex; justify-content: space-between; align-items: flex-end;
+}
+.fx-preloader__word { font-size: clamp(14px, 1.2vw, 18px); letter-spacing: .3em; text-transform: uppercase; opacity: .7; }
+.fx-preloader__count { font-size: clamp(80px, 18vw, 280px); line-height: .8; font-variant-numeric: tabular-nums; font-weight: 300; }
+
+/* 3D-Modell: Standbild solange geladen wird / auf low */
+.fx-model-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+/* Bilder */
+.fx-img { overflow: hidden; position: relative; }
+.fx-img img, .fx-img video { width: 100%; height: 100%; object-fit: cover; display: block; will-change: transform; }
+
+/* Tauchfahrt */
+.fx-dive { position: relative; height: 100vh; height: 100svh; overflow: hidden; }
+.fx-dive [data-depth] { position: absolute; inset: 0; display: grid; place-items: center; will-change: transform, opacity; }
+.fx-dive.fx-static { height: auto; overflow: visible; }
+.fx-dive.fx-static [data-depth] { position: relative; min-height: 70vh; }
+
+/* Marquee */
+.fx-marquee { overflow: hidden; white-space: nowrap; }
+.fx-marquee > * { display: inline-flex; will-change: transform; }
+
+/* Highlight-Text braucht volle Deckkraft als Ausgangswert für "low" */
+.fx-highlight .fx-unit { will-change: opacity; }
+
+/* Horizontal-Scroll ohne Animation: wischbar */
+.fx-static[data-horizontal] { overflow-x: auto; scroll-snap-type: x mandatory; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
