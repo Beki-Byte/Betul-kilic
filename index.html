@@ -153,37 +153,39 @@ if(s&&s!=='tr'&&P[s])location.replace(P[s]+location.search+location.hash);})();<
       </ol>
     </section>
 
-    <!-- 6 · WEG: Morgen. Horizontal gepinnt -->
+    <!-- 6 · WEG: Morgen. Drei Level untereinander, Zahlen füllen sich beim Scrollen -->
     <section class="journey" id="journey" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
-      <header class="sec-head sec-head--row">
-        <div><p class="eyebrow">Web geliştirmeye giden yol</p>
-        <h2 class="h2" data-reveal>Bir görevden <em>bir tutku.</em></h2></div>
-        <p class="jr__drag" aria-hidden="true">Kaydır →</p>
+      <header class="sec-head">
+        <p class="eyebrow">Web geliştirmeye giden yol</p>
+        <h2 class="h2" data-reveal>Bir görevden <em>bir tutku.</em></h2>
       </header>
-      <div class="jr__track">
-          <article class="jr__panel">
+      <ol class="jr">
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">01</p>
+          <div class="jr__body">
             <p class="jr__level">Level 01 <span>/ 03</span></p>
-            <p class="jr__num" aria-hidden="true">01</p>
             <h3 class="jr__name">Başlangıç</h3>
             <p class="jr__text">Annemin işi için bir web sitesine ihtiyacı vardı. Siteyi kendim geliştirmeye karar verdim.</p>
-          </article>
-          <article class="jr__panel">
+          </div>
+        </li>
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">02</p>
+          <div class="jr__body">
             <p class="jr__level">Level 02 <span>/ 03</span></p>
-            <p class="jr__num" aria-hidden="true">02</p>
             <h3 class="jr__name">Gelişim</h3>
             <p class="jr__text">Her adımda yeni özellikler eklendi: randevu takvimi, danışan portalı, ödeme sayfası ve yorumlar.</p>
-          </article>
-          <article class="jr__panel">
+          </div>
+        </li>
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">03</p>
+          <div class="jr__body">
             <p class="jr__level">Level 03 <span>/ 03</span></p>
-            <p class="jr__num" aria-hidden="true">03</p>
             <h3 class="jr__name">Bugün</h3>
             <p class="jr__text">Teknoloji ve programlama bugün hayatımın sabit bir parçası. Öğrenmeye devam ediyor ve kendi fikirlerimi hayata geçiriyorum.</p>
-          </article>
-          <article class="jr__panel jr__panel--quote">
-            <p class="jr__quote">“Bir proje hobi oldu, hobi de <em>tutku.</em>”</p>
-          </article>
-      </div>
-      <div class="jr__line" aria-hidden="true"><i></i></div>
+          </div>
+        </li>
+      </ol>
+      <p class="jr__quote" data-reveal>“Bir proje hobi oldu, hobi de <em>tutku.</em>”</p>
     </section>
 
     <!-- 7 · PROJEKTE -->

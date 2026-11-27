@@ -4,7 +4,7 @@ import { gsap, ScrollTrigger, initSmoothScroll } from './fx/core.js';
 import { createShaderBackdrop } from './fx/shader-backdrop.js';
 import { createParticleMorph } from './fx/particle-morph.js';
 import { revealText, scrubHighlight, scrollMarquee, countUp } from './fx/text.js';
-import { horizontalScroll, revealImages, colorShift, parallax } from './fx/scenes.js';
+import { revealImages, colorShift, parallax } from './fx/scenes.js';
 import { initCursor } from './fx/cursor.js';
 import { runPreloader } from './fx/preloader.js';
 import { paperShape, planeShape, skyShape, viewWidth } from './js/shapes.js';
@@ -93,10 +93,14 @@ if (tier !== 'low') {
   });
 }
 
-// 6 · WEG — horizontal (nur Desktop), Fortschrittslinie
-if (tier === 'high') {
-  const tw = horizontalScroll('.journey', '.jr__track');
-  if (tw) gsap.to('.jr__line i', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.journey', start: 'top top', end: () => '+=' + ($('.jr__track').scrollWidth - innerWidth), scrub: true } });
+// 6 · WEG — die Level-Zahlen füllen sich beim Scrollen mit Meerblau
+if (tier !== 'low') {
+  $$('.jr__row').forEach((row) => {
+    gsap.fromTo(row.querySelector('.jr__num'), { '--fill': '0%' }, { '--fill': '100%', ease: 'none',
+      scrollTrigger: { trigger: row, start: 'top 80%', end: 'center 45%', scrub: true } });
+    gsap.from(row.querySelector('.jr__body').children, { yPercent: 40, opacity: 0, duration: 1.1, stagger: 0.08, ease: 'power4.out',
+      scrollTrigger: { trigger: row, start: 'top 75%', once: true } });
+  });
 }
 
 // 8 · Demo-Chat

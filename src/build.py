@@ -96,12 +96,14 @@ def index(lang):
         </li>""" for i, (n, d) in enumerate(INTERESTS[lang]))
     journey = "".join(
         f"""
-          <article class="jr__panel">
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">0{i + 1}</p>
+          <div class="jr__body">
             <p class="jr__level">Level 0{i + 1} <span>/ 03</span></p>
-            <p class="jr__num" aria-hidden="true">0{i + 1}</p>
             <h3 class="jr__name">{html.escape(n)}</h3>
             <p class="jr__text">{html.escape(d)}</p>
-          </article>""" for i, (n, d) in enumerate(JOURNEY[lang]))
+          </div>
+        </li>""" for i, (n, d) in enumerate(JOURNEY[lang]))
     stories = "".join(f'<li><span>0{i}</span>{L("story_" + str(i))}</li>' for i in range(1, 5))
     feats = "".join(f"<li>{html.escape(f)}</li>" for f in T["features"][lang])
     subject = L("ct_mail_subject")
@@ -199,19 +201,15 @@ def index(lang):
       </ol>
     </section>
 
-    <!-- 6 · WEG: Morgen. Horizontal gepinnt -->
+    <!-- 6 · WEG: Morgen. Drei Level untereinander, Zahlen füllen sich beim Scrollen -->
     <section class="journey" id="journey" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
-      <header class="sec-head sec-head--row">
-        <div><p class="eyebrow">{L("jr_eyebrow")}</p>
-        <h2 class="h2" data-reveal>{L("jr_title")}</h2></div>
-        <p class="jr__drag" aria-hidden="true">{L("jr_drag")}</p>
+      <header class="sec-head">
+        <p class="eyebrow">{L("jr_eyebrow")}</p>
+        <h2 class="h2" data-reveal>{L("jr_title")}</h2>
       </header>
-      <div class="jr__track">{journey}
-          <article class="jr__panel jr__panel--quote">
-            <p class="jr__quote">{L("jr_quote")}</p>
-          </article>
-      </div>
-      <div class="jr__line" aria-hidden="true"><i></i></div>
+      <ol class="jr">{journey}
+      </ol>
+      <p class="jr__quote" data-reveal>{L("jr_quote")}</p>
     </section>
 
     <!-- 7 · PROJEKTE -->
