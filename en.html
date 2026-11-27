@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Betül Kılıç · Web development</title>
+  <meta name="description" content="Betül Kılıç, 15, builds websites. Why shouldn&#x27;t a sheet of paper fly? Ideas, interests and projects.">
+  <meta name="theme-color" content="#070d1a">
+  <meta property="og:title" content="Betül Kılıç · Web development">
+  <meta property="og:description" content="Betül Kılıç, 15, builds websites. Why shouldn&#x27;t a sheet of paper fly? Ideas, interests and projects.">
+  <meta property="og:image" content="img/og.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="tr" href="index.html">
+  <link rel="alternate" hreflang="de" href="de.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  
+  <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fx/fx.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/three.module.min.js",
+  "three/addons/": "./vendor/three/addons/",
+  "gsap": "./vendor/gsap/index.js",
+  "gsap/": "./vendor/gsap/",
+  "lenis": "./vendor/lenis/lenis.mjs"
+} }
+</script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top" data-magnetic="0.25" aria-label="Betül Kılıç">B<em>.</em>K</a>
+    <nav class="nav__links" aria-label="Navigation">
+      <a href="#about">About</a><a href="#interests">Interests</a><a href="#journey">Journey</a><a href="#projects">Projects</a>
+    </nav>
+    <div class="nav__end">
+      <nav class="langs" aria-label="Language"><a href="index.html" hreflang="tr" lang="tr" data-lang="tr">TR</a><a href="de.html" hreflang="de" lang="de" data-lang="de">DE</a><a href="en.html" hreflang="en" lang="en" data-lang="en" aria-current="true">EN</a></nav>
+      <a class="nav__cta" href="#contact" data-magnetic="0.3">Write me</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1 · HERO: Tag am Meer. Seiden-Shader in den Farben des Fotos, riesiger Name -->
+    <section class="hero" id="top" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__top"><span>N° 15 — Web development</span><span class="hero__horizon" aria-hidden="true"></span><span>Portfolio · 2026</span></div>
+      <h1 class="hero__title" aria-label="Betül Kılıç">
+        <span class="hero__line">Betül</span>
+        <span class="hero__line hero__line--it">Kılıç</span>
+      </h1>
+      <div class="hero__foot">
+        <p class="hero__lead">I'm 15 and I build websites. Everything starts with an idea and <em>takes off with code.</em></p>
+        <p class="hero__tag">Technology · Ideas · Curiosity</p>
+        <a class="hero__scroll" href="#manifest"><span>Scroll</span><i aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <div class="marquee fx-marquee" aria-hidden="true"><div><span>Web development</span><i>✦</i><span>Technology</span><i>✦</i><span>Robotics</span><i>✦</i><span>Astronomy</span><i>✦</i><span>Riding</span><i>✦</i><span>Archery</span><i>✦</i><span>Books</span><i>✦</i><span>History</span><i>✦</i><span>Politics</span><i>✦</i><span>Creative ideas</span><i>✦</i></div></div>
+
+    <!-- 2 · MANIFEST: die Frage, die alles startet -->
+    <section class="manifest" id="manifest" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
+      <p class="eyebrow">A question</p>
+      <p class="manifest__q">Why shouldn't a sheet of paper be able to <em>fly</em> or swim?</p>
+      <p class="manifest__text" data-reveal>I think it is important not to limit your thoughts too early. Because an unusual idea can turn into something valuable.</p>
+    </section>
+
+    <!-- 3 · STORY: Papier -> Flieger -> Sterne -> Code (gepinnt, Partikel) -->
+    <section class="story" id="flight" data-theme-bg="#070d1a" data-theme-fg="#f1eadc">
+      <div class="story__stage">
+        <div class="story__sky" aria-hidden="true"></div>
+        <div class="story__particles" aria-hidden="true"></div>
+        <div class="story__hud" aria-hidden="true">
+          <span>Flight plan</span>
+          <span class="story__count"><b>01</b> / 04</span>
+        </div>
+        <ol class="story__captions"><li><span>01</span>A sheet of paper.</li><li><span>02</span>One fold. One idea.</li><li><span>03</span>It flies, all the way to the stars.</li><li><span>04</span>And turns into code.</li></ol>
+        <div class="story__bar" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <!-- 4 · ÜBER MICH: Foto mit Code-Lupe -->
+    <section class="about" id="about" data-theme-bg="#070d1a" data-theme-fg="#f1eadc">
+      <div class="about__media">
+        <div class="lens" data-cursor="Decode">
+          <figure class="about__photo" data-img-reveal="up">
+            <img src="img/betul-meer.webp" width="840" height="1120" alt="Betül stands in the sea in a hijab and a light dress, looking at the horizon.">
+          </figure>
+          <canvas class="lens__canvas" aria-hidden="true"></canvas>
+          <span class="lens__tag" aria-hidden="true">betul.jpg <b>decoded</b></span>
+        </div>
+        <p class="about__hint"><span class="hint--fine">Move your mouse over the photo: the lens turns that area into code.</span><span class="hint--touch">Tap the photo and swipe across it: the lens turns that area into code.</span></p>
+      </div>
+      <div class="about__body">
+        <p class="eyebrow">About me</p>
+        <h2 class="h2" data-reveal>Hi, I'm <em>Betül.</em></h2>
+        <p class="about__text">I'm 15 years old and I work with web development, technology and creative ideas. For me, creativity does not end with software: it ranges from hardware and robotics to inventions that make everyday life easier.</p>
+        <dl class="facts">
+          <div><dt>Name</dt><dd>Betül Erva Kılıç</dd></div>
+          <div><dt>Age</dt><dd>15</dd></div>
+          <div><dt>Interests</dt><dd>Nature, astronomy, history, politics</dd></div>
+          <div><dt>Free time</dt><dd>Horse riding, archery, writing</dd></div>
+          <div><dt>Identity</dt><dd>Muslim, wears a hijab</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 5 · INTERESSEN: Nachthimmel, nummerierte Riesenliste -->
+    <section class="interests" id="interests" data-theme-bg="#070d1a" data-theme-fg="#f1eadc">
+      <div class="interests__bg" aria-hidden="true"></div>
+      <header class="sec-head">
+        <p class="eyebrow">My interests</p>
+        <h2 class="h2" data-reveal>Beyond the <em>screen.</em></h2>
+        <p class="sec-head__text" data-reveal>Technology is not all that occupies me. There is a lot in this world to discover, understand or create yourself.</p>
+      </header>
+      <ol class="int">
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">01</span>
+          <h3 class="int__name">Technology &amp; inventions</h3>
+          <p class="int__desc">Software, hardware and robotics: I am interested in everything you can build and test.</p>
+        </li>
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">02</span>
+          <h3 class="int__name">Reading &amp; writing</h3>
+          <p class="int__desc">I read a lot and write my own books and short stories.</p>
+        </li>
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">03</span>
+          <h3 class="int__name">Nature &amp; astronomy</h3>
+          <p class="int__desc">From nature to the night sky: I want to understand how the world works.</p>
+        </li>
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">04</span>
+          <h3 class="int__name">Riding &amp; archery</h3>
+          <p class="int__desc">Being outside and on the move balances the work at the screen.</p>
+        </li>
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">05</span>
+          <h3 class="int__name">History &amp; politics</h3>
+          <p class="int__desc">I want to understand how the world came to be and have a say in what comes next.</p>
+        </li>
+        <li class="int__row" data-reveal-row>
+          <span class="int__no">06</span>
+          <h3 class="int__name">Original ideas</h3>
+          <p class="int__desc">I follow my own ideas consistently and keep learning.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 6 · WEG: Morgen. Drei Level untereinander, Zahlen füllen sich beim Scrollen -->
+    <section class="journey" id="journey" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
+      <header class="sec-head">
+        <p class="eyebrow">My path into web development</p>
+        <h2 class="h2" data-reveal>From a task <em>to a passion.</em></h2>
+      </header>
+      <ol class="jr">
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">01</p>
+          <div class="jr__body">
+            <p class="jr__level">Level 01 <span>/ 03</span></p>
+            <h3 class="jr__name">Beginning</h3>
+            <p class="jr__text">My mother needed a website for her work. I decided to build it myself.</p>
+          </div>
+        </li>
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">02</p>
+          <div class="jr__body">
+            <p class="jr__level">Level 02 <span>/ 03</span></p>
+            <h3 class="jr__name">Growth</h3>
+            <p class="jr__text">With every step, new features were added: an appointment calendar, a client portal, a payment page and reviews.</p>
+          </div>
+        </li>
+        <li class="jr__row">
+          <p class="jr__num" aria-hidden="true">03</p>
+          <div class="jr__body">
+            <p class="jr__level">Level 03 <span>/ 03</span></p>
+            <h3 class="jr__name">Today</h3>
+            <p class="jr__text">Technology and programming are a fixed part of my life today. I keep learning and turn my own ideas into reality.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="jr__quote" data-reveal>“A project became a hobby, and the hobby became a <em>passion.</em>”</p>
+    </section>
+
+    <!-- 7 · PROJEKTE -->
+    <section class="projects" id="projects" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
+      <header class="sec-head">
+        <p class="eyebrow">My projects</p>
+        <h2 class="h2 h2--xl" data-reveal>Things I've <em>built.</em></h2>
+        <p class="sec-head__text" data-reveal>The collection grows with every new project.</p>
+      </header>
+
+      <article class="proj">
+        <a class="proj__img" href="https://beki-byte.github.io/Derya-Kilic-Hipnoz-ve-Deep-EFT-Merkezi-/" target="_blank" rel="noopener noreferrer" data-cursor="Open" tabindex="-1" aria-hidden="true">
+          <figure data-img-reveal="left"><img src="img/derya.webp" width="1000" height="514" alt="" loading="lazy"></figure>
+        </a>
+        <div class="proj__body">
+          <p class="proj__meta"><span>01</span>Website · 2026</p>
+          <h3 class="proj__title">A website for my mother</h3>
+          <p class="proj__text">My first project: appointment calendar, client portal, payment page, reviews and a chat assistant.</p>
+          <a class="link" href="https://beki-byte.github.io/Derya-Kilic-Hipnoz-ve-Deep-EFT-Merkezi-/" target="_blank" rel="noopener noreferrer">Open website <i aria-hidden="true">↗</i></a>
+        </div>
+      </article>
+
+      <article class="proj proj--flip">
+        <a class="proj__img" href="https://kartenatelier.goldensunderya.workers.dev" target="_blank" rel="noopener noreferrer" data-cursor="Open" tabindex="-1" aria-hidden="true">
+          <figure class="cardart" data-img-reveal="up">
+            <span class="cardart__back"></span>
+            <span class="cardart__front"><small>designed by you</small><em>Happy birthday</em><span>Kartenatelier</span></span>
+          </figure>
+        </a>
+        <div class="proj__body">
+          <p class="proj__meta"><span>02</span>Web app</p>
+          <h3 class="proj__title proj__title--big">Kartenatelier</h3>
+          <p class="proj__text">I wanted to design a birthday card for my dad, but couldn't find an app that was easy, free and the way I wanted. So I built one myself.</p>
+          <a class="link" href="https://kartenatelier.goldensunderya.workers.dev" target="_blank" rel="noopener noreferrer">Open the studio <i aria-hidden="true">↗</i></a>
+        </div>
+      </article>
+
+      <p class="eyebrow pl__eyebrow">More</p>
+      <ol class="pl">
+        <li class="pl__row" data-tone="accent">
+          <span class="pl__no">03</span>
+          <div class="pl__main">
+            <h3 class="pl__name">Digital Wardrobe</h3>
+            <p class="pl__desc">You add your clothes, and the app suggests outfits based on your taste and the weather. The more favourite outfits you mark or create and save yourself, the better it gets to know you.</p>
+            <div class="pl__links"><a class="link" href="https://beki-byte.github.io/digital-wardrobe/" target="_blank" rel="noopener noreferrer">App <i aria-hidden="true">↗</i></a><a class="link" href="https://beki-byte.github.io/digital-wardrobe/neu/" target="_blank" rel="noopener noreferrer">3D closet <i aria-hidden="true">↗</i></a><a class="link" href="https://beki-byte.github.io/digital-wardrobe/y2k/" target="_blank" rel="noopener noreferrer">Y2K <i aria-hidden="true">↗</i></a></div>
+          </div>
+          <span class="pl__type">Web app</span>
+          <span class="pl__status pl__status--live">Live</span>
+          <div class="pl__prev" aria-hidden="true"><b>Digital Wardrobe</b></div>
+        </li>
+        <li class="pl__row" data-tone="ink">
+          <span class="pl__no">04</span>
+          <div class="pl__main">
+            <h3 class="pl__name">The Dinner Society</h3>
+            <p class="pl__desc">An app that uses AI to plan a complete all-inclusive murder mystery dinner: printables, menu, outfit ideas and more.</p>
+            
+          </div>
+          <span class="pl__type">AI app</span>
+          <span class="pl__status pl__status--wip">In progress</span>
+          <div class="pl__prev" aria-hidden="true"><b>The Dinner Society</b></div>
+        </li>
+        <li class="pl__row" data-tone="sky">
+          <span class="pl__no">05</span>
+          <div class="pl__main">
+            <h3 class="pl__name">Mochi Town</h3>
+            <p class="pl__desc">A digital town where you meet friends and study together. With the e-book connector, you can also read your own books there.</p>
+            
+          </div>
+          <span class="pl__type">Digital town</span>
+          <span class="pl__status pl__status--wip">In progress</span>
+          <div class="pl__prev" aria-hidden="true"><b>Mochi Town</b></div>
+        </li>
+        <li class="pl__row" data-tone="img">
+          <span class="pl__no">06</span>
+          <div class="pl__main">
+            <h3 class="pl__name">Lisan</h3>
+            <p class="pl__desc">Learning vocabulary like a game: learn words, collect coins, decorate your own pet and room. With a study plan, mini games and photo scanning.</p>
+            
+          </div>
+          <span class="pl__type">App</span>
+          <span class="pl__status pl__status--private">Private</span>
+          <div class="pl__prev" aria-hidden="true"><img src="img/lisan.webp" alt="" loading="lazy"></div>
+        </li>
+        <li class="pl__row" data-tone="night">
+          <span class="pl__no">07</span>
+          <div class="pl__main">
+            <h3 class="pl__name">Niko</h3>
+            <p class="pl__desc">My personal AI companion with its own character. Runs entirely on my own computer, with chat and voice mode.</p>
+            
+          </div>
+          <span class="pl__type">AI · local</span>
+          <span class="pl__status pl__status--private">Private</span>
+          <div class="pl__prev" aria-hidden="true"><b>Niko</b></div>
+        </li>
+      </ol>
+
+      <p class="proj__next"><span>✦</span><b>The next project <em>is on its way…</em></b></p>
+    </section>
+
+    <!-- 8 · NAHAUFNAHME: Zahlen + Demo-Chat -->
+    <section class="closeup" data-theme-bg="#ebe5d9" data-theme-fg="#0c1a2e">
+      <div class="closeup__text">
+        <p class="eyebrow">Close-up</p>
+        <h2 class="h2" data-reveal>My first <em>website.</em></h2>
+        <p class="closeup__p" data-reveal>The website for my mother's work was my first project. I wrote it with HTML, CSS and JavaScript, the first version entirely from scratch. The demo assistant next to it shows the logic of the chat on that site.</p>
+        <div class="stats">
+          <div><strong data-count="9">9</strong><span>pages</span></div>
+          <div><strong data-count="4200" data-suffix="+">4200+</strong><span>lines of code</span></div>
+          <div><strong data-count="3">3</strong><span>languages: HTML · CSS · JS</span></div>
+          <div><strong data-count="2">2</strong><span>site languages: TR · DE</span></div>
+        </div>
+        <ul class="feats"><li>Online appointment calendar</li><li>Client portal</li><li>PayPal payment</li><li>Reviews (Firebase)</li><li>Chat assistant</li><li>Cookie consent</li></ul>
+      </div>
+      <div class="chat" data-cursor="-">
+        <div class="chat__head"><b>demo-assistant.js</b><span>not AI, just rules</span><i aria-hidden="true"></i></div>
+        <div class="chat__msgs" role="log" aria-live="polite" data-lenis-prevent></div>
+        <div class="chat__chips"></div>
+        <form class="chat__form" autocomplete="off">
+          <label class="sr" for="chat-in">Your message</label>
+          <input id="chat-in" type="text" placeholder="Type something…" maxlength="120">
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 9 · KONTAKT: Nacht, Höhenlinien, Magnet-Button -->
+    <section class="contact" id="contact" data-theme-bg="#070d1a" data-theme-fg="#f1eadc">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <p class="eyebrow">Feedback</p>
+      <h2 class="contact__title" data-reveal>Got an idea? <em>Write me.</em></h2>
+      <p class="contact__text" data-reveal>Your feedback means a lot to me. Every comment helps me get better.</p>
+      <div class="contact__actions">
+        <a class="btn" href="mailto:goldensunderya9@gmail.com?subject=Feedback" data-magnetic="0.4"><span data-magnetic-inner>Send feedback <i aria-hidden="true">→</i></span></a>
+        <a class="btn btn--ghost" href="https://github.com/Beki-Byte" target="_blank" rel="noopener noreferrer" data-magnetic="0.3"><span data-magnetic-inner>GitHub <i aria-hidden="true">↗</i></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-theme-bg="#070d1a" data-theme-fg="#f1eadc">
+    <p class="footer__giant" aria-hidden="true">Betül <em>Kılıç</em></p>
+    <div class="footer__row">
+      <span>© 2026 Betül Kılıç · Coded from scratch</span>
+      <a href="datenschutz-en.html">Privacy</a>
+      <a href="https://github.com/Beki-Byte" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#top">Back to top ↑</a>
+      <nav class="langs" aria-label="Language"><a href="index.html" hreflang="tr" lang="tr" data-lang="tr">TR</a><a href="de.html" hreflang="de" lang="de" data-lang="de">DE</a><a href="en.html" hreflang="en" lang="en" data-lang="en" aria-current="true">EN</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
