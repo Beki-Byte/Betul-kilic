@@ -208,7 +208,7 @@ PRIVACY = {
   "back": {"tr": "Ana sayfa", "de": "Startseite", "en": "Home"},
   "sections": {
     "tr": [
-      ["Sorumlu kişi", '<p>Bu web sitesinden sorumlu kişi: Betül Kılıç. İletişim: <a href="mailto:goldensunderya9@gmail.com">goldensunderya9@gmail.com</a></p>'],
+      ["Sorumlu kişi", '<p>Bu web sitesinden sorumlu kişi: Betül Kılıç. İletişim: <a href="mailto:kilic.betul.erva@gmail.com">kilic.betul.erva@gmail.com</a></p>'],
       ["Kısaca", "<ul><li>Çerez (cookie) kullanılmaz.</li><li>Analiz veya izleme araçları (örneğin Google Analytics) kullanılmaz.</li><li>Yazı tipleri, görseller ve tüm kod doğrudan bu sitede bulunur; Google Fonts veya CDN gibi harici hizmetlerden yüklenmez.</li><li>Sitede form yoktur; benim tarafımdan veri toplanmaz.</li></ul>"],
       ["Barındırma (GitHub Pages)", '<p>Bu site GitHub Pages üzerinde barındırılmaktadır. Sağlayıcı: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, ABD. Siteyi ziyaret ettiğinizde GitHub, teknik olarak gerekli bilgileri (örneğin IP adresi, tarih ve saat, tarayıcı türü, yönlendiren sayfa) sunucu kayıtlarında işleyebilir. Bu, sitenin güvenli ve sorunsuz çalışması için gereklidir (GDPR md. 6 f. 1 lit. f – meşru menfaat). Veriler ABD’ye aktarılabilir. Ayrıntılar için: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub gizlilik bildirimi</a>.</p>'],
       ["E-posta ile iletişim", "<p>“Geri bildirim gönder” düğmesi yalnızca kendi e-posta programınızı açar. Bana e-posta yazarsanız, adresinizi ve mesajınızı yalnızca yanıt vermek için kullanırım (GDPR md. 6 f. 1 lit. f). Veriler artık gerekli olmadığında silinir ve üçüncü kişilerle paylaşılmaz. E-postalar Google (Gmail) üzerinden alınır.</p>"],
@@ -218,7 +218,7 @@ PRIVACY = {
       ["Haklarınız", "<p>GDPR kapsamında bilgi alma, düzeltme, silme, işlemeyi kısıtlama, veri taşınabilirliği ve itiraz haklarına sahipsiniz (md. 15–21). Bunun için bana yukarıdaki e-posta adresinden ulaşabilirsiniz. Ayrıca bir veri koruma denetim makamına şikâyette bulunma hakkınız vardır.</p>"],
     ],
     "de": [
-      ["Verantwortliche", '<p>Verantwortlich für diese Website ist Betül Kılıç. Kontakt: <a href="mailto:goldensunderya9@gmail.com">goldensunderya9@gmail.com</a></p>'],
+      ["Verantwortliche", '<p>Verantwortlich für diese Website ist Betül Kılıç. Kontakt: <a href="mailto:kilic.betul.erva@gmail.com">kilic.betul.erva@gmail.com</a></p>'],
       ["Das Wichtigste in Kürze", "<ul><li>Es werden keine Cookies gesetzt.</li><li>Es gibt keine Analyse- oder Tracking-Werkzeuge (zum Beispiel kein Google Analytics).</li><li>Schriften, Bilder und der gesamte Code liegen direkt auf dieser Website und werden nicht von Drittanbietern wie Google Fonts oder einem CDN geladen.</li><li>Es gibt keine Formulare; ich selbst erhebe keine Daten über die Website.</li></ul>"],
       ["Hosting (GitHub Pages)", '<p>Diese Website wird über GitHub Pages bereitgestellt. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seite kann GitHub technisch notwendige Daten in Server-Logfiles verarbeiten, zum Beispiel IP-Adresse, Datum und Uhrzeit, Browsertyp und die zuvor besuchte Seite. Das ist für den sicheren und stabilen Betrieb der Website erforderlich (Art. 6 Abs. 1 lit. f DSGVO, berechtigtes Interesse). Dabei können Daten in die USA übermittelt werden. Mehr dazu in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>'],
       ["Kontakt per E-Mail", "<p>Der Button „Feedback geben“ öffnet nur dein eigenes E-Mail-Programm. Wenn du mir schreibst, verwende ich deine Adresse und Nachricht ausschließlich, um dir zu antworten (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden gelöscht, sobald sie nicht mehr benötigt werden, und nicht an Dritte weitergegeben. E-Mails werden über Google (Gmail) empfangen.</p>"],
@@ -228,7 +228,7 @@ PRIVACY = {
       ["Deine Rechte", "<p>Du hast nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Schreib mir dafür einfach an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>"],
     ],
     "en": [
-      ["Controller", '<p>The person responsible for this website is Betül Kılıç. Contact: <a href="mailto:goldensunderya9@gmail.com">goldensunderya9@gmail.com</a></p>'],
+      ["Controller", '<p>The person responsible for this website is Betül Kılıç. Contact: <a href="mailto:kilic.betul.erva@gmail.com">kilic.betul.erva@gmail.com</a></p>'],
       ["In short", "<ul><li>No cookies are set.</li><li>No analytics or tracking tools are used (for example, no Google Analytics).</li><li>Fonts, images and all code are hosted on this website and are not loaded from third parties such as Google Fonts or a CDN.</li><li>There are no forms; I do not collect any data through the website myself.</li></ul>"],
       ["Hosting (GitHub Pages)", '<p>This website is hosted on GitHub Pages. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you visit the site, GitHub may process technically necessary data in server log files, such as your IP address, date and time, browser type and the referring page. This is required for the secure and stable operation of the website (Art. 6(1)(f) GDPR, legitimate interest). Data may be transferred to the USA. For details, see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub privacy statement</a>.</p>'],
       ["Contact by email", "<p>The “Send feedback” button only opens your own email program. If you write to me, I use your address and message solely to reply (Art. 6(1)(f) GDPR). The data is deleted once it is no longer needed and is not shared with third parties. Emails are received via Google (Gmail).</p>"],
@@ -259,7 +259,7 @@ T.update({
 })
 
 PROJECTS = [
-  {"name": "Digital Wardrobe", "status": "live", "tone": "accent",
+  {"name": "Digital Wardrobe", "img": "img/wardrobe-3d-open.webp", "status": "live", "tone": "accent",
    "type": {"tr": "Web uygulaması", "de": "Web-App", "en": "Web app"},
    "desc": {
      "tr": "Kıyafetlerini eklersin, uygulama zevkine ve havaya göre kombin önerir. Favori kombinlerini işaretledikçe ya da kendin oluşturup kaydettikçe seni daha iyi tanır.",
@@ -271,14 +271,14 @@ PROJECTS = [
      ({"tr": "3D dolap", "de": "3D-Schrank", "en": "3D closet"}, "https://beki-byte.github.io/digital-wardrobe/neu/"),
      ({"tr": "Y2K", "de": "Y2K", "en": "Y2K"}, "https://beki-byte.github.io/digital-wardrobe/y2k/"),
    ]},
-  {"name": "The Dinner Society", "status": "wip", "tone": "ink",
+  {"name": "The Dinner Society", "img": "img/dinner-society.webp", "status": "wip", "tone": "ink",
    "type": {"tr": "Yapay zekâ uygulaması", "de": "KI-App", "en": "AI app"},
    "desc": {
      "tr": "Yapay zekâyla eksiksiz, her şey dahil bir cinayet gizemi akşam yemeği planlayan uygulama: yazdırılabilir materyaller, menü, kıyafet fikirleri ve daha fazlası.",
      "de": "Eine App, die mit KI ein komplettes All-inclusive-Krimidinner plant: mit Sachen zum Ausdrucken, Menü, Outfit-Ideen und mehr.",
      "en": "An app that uses AI to plan a complete all-inclusive murder mystery dinner: printables, menu, outfit ideas and more.",
    }},
-  {"name": "Mochi Town", "status": "wip", "tone": "sky",
+  {"name": "Mochi Town", "img": "img/mochi-town.webp", "status": "wip", "tone": "sky",
    "type": {"tr": "Dijital şehir", "de": "Digitale Stadt", "en": "Digital town"},
    "desc": {
      "tr": "Arkadaşlarınla buluşup birlikte ders çalışabildiğin dijital bir şehir. E-kitap bağlayıcısıyla kendi kitaplarını da orada okuyabilirsin.",
@@ -292,7 +292,7 @@ PROJECTS = [
      "de": "Vokabeln lernen wie im Spiel: Wörter lernen, Münzen sammeln, das eigene Tier und Zimmer gestalten. Mit Lernplan, Minispielen und Foto-Scan.",
      "en": "Learning vocabulary like a game: learn words, collect coins, decorate your own pet and room. With a study plan, mini games and photo scanning.",
    }},
-  {"name": "Niko", "status": "private", "tone": "night",
+  {"name": "Niko", "img": "img/niko.webp", "status": "private", "tone": "night",
    "type": {"tr": "Yapay zekâ · yerel", "de": "KI · lokal", "en": "AI · local"},
    "desc": {
      "tr": "Kendine has karakteri olan kişisel yapay zekâ arkadaşım. Tamamen kendi bilgisayarımda çalışıyor; sohbet ve sesli mod var.",
