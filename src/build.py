@@ -18,7 +18,7 @@ from content import LANGS, T, INTERESTS, JOURNEY, MARQUEE, PRIVACY, PROJECTS  # 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOME = {"tr": "index.html", "de": "de.html", "en": "en.html"}
 PRIV = {"tr": "datenschutz.html", "de": "datenschutz-de.html", "en": "datenschutz-en.html"}
-MAIL = "goldensunderya9@gmail.com"
+MAIL = "kilic.betul.erva@gmail.com"
 GITHUB = "https://github.com/Beki-Byte"
 URL_DERYA = "https://beki-byte.github.io/Derya-Kilic-Hipnoz-ve-Deep-EFT-Merkezi-/"
 URL_KARTEN = "https://kartenatelier.goldensunderya.workers.dev"
@@ -115,6 +115,7 @@ def index(lang):
           <div class="pl__main">
             <h3 class="pl__name">{html.escape(pr["name"])}</h3>
             <p class="pl__desc">{html.escape(pr["desc"][lang])}</p>
+            {f'<figure class="pl__thumb"><img src="{pr["img"]}" alt="" loading="lazy"></figure>' if pr.get("img") else ''}
             {f'<div class="pl__links">{links}</div>' if links else ''}
           </div>
           <span class="pl__type">{html.escape(pr["type"][lang])}</span>
@@ -251,10 +252,7 @@ def index(lang):
 
       <article class="proj proj--flip">
         <a class="proj__img" href="{URL_KARTEN}" target="_blank" rel="noopener noreferrer" data-cursor="{L("cursor_open")}" tabindex="-1" aria-hidden="true">
-          <figure class="cardart" data-img-reveal="up">
-            <span class="cardart__back"></span>
-            <span class="cardart__front"><small>{L("k_card_sub")}</small><em>{L("k_card")}</em><span>Kartenatelier</span></span>
-          </figure>
+          <figure data-img-reveal="up"><img src="img/kartenatelier.webp" width="1600" height="944" alt="" loading="lazy"></figure>
         </a>
         <div class="proj__body">
           <p class="proj__meta"><span>02</span>{L("k_meta")}</p>
